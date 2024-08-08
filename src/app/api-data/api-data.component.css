@@ -1,0 +1,66 @@
+.tabs-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tabs button {
+    background-color: #4b2c20;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .tabs button:hover {
+    background-color: #6e3b2a;
+    transform: scale(1.05);
+  }
+  
+  .wine-section {
+    margin-bottom: 2rem;
+  }
+  
+  .wine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .wine-item {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .wine-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .wine-item h3 {
+    margin: 0.5rem 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

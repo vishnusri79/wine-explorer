@@ -1,0 +1,72 @@
+<div class="tabs-container">
+    <div class="tabs">
+      <button (click)="fetchRedWines()">Red Wines</button>
+      <button (click)="fetchWhiteWines()">White Wines</button>
+      <button (click)="fetchSparklingWines()">Sparkling Wines</button>
+      <button (click)="fetchRoseWines()">Rosé Wines</button>
+      <button (click)="fetchPortWines()">Port Wines</button>
+    </div>
+  </div>
+
+  
+  
+  <div *ngIf="selectedCategory === 'red'" class="wine-section fade-in">
+    <h2>Red Wines</h2>
+    <div class="wine-list">
+      <div *ngFor="let wine of redWines" class="wine-item">
+        <img [src]="wine.image" alt="{{ wine.wine }}" class="wine-image" />
+        <h3>{{ wine.wine }}</h3>
+        <p>{{ wine.winery }}</p>
+        <p>{{ wine.rating.average }} / 5 ({{ wine.rating.reviews }} reviews)</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCategory === 'white'" class="wine-section fade-in">
+    <h2>White Wines</h2>
+    <div class="wine-list">
+      <div *ngFor="let wine of whiteWines" class="wine-item">
+        <img [src]="wine.image" alt="{{ wine.wine }}" class="wine-image" />
+        <h3>{{ wine.wine }}</h3>
+        <p>{{ wine.winery }}</p>
+        <p>{{ wine.rating.average }} / 5 ({{ wine.rating.reviews }} reviews)</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCategory === 'sparkling'" class="wine-section fade-in">
+    <h2>Sparkling Wines</h2>
+    <div class="wine-list">
+      <div *ngFor="let wine of sparklingWines" class="wine-item">
+        <img [src]="wine.image" alt="{{ wine.wine }}" class="wine-image" />
+        <h3>{{ wine.wine }}</h3>
+        <p>{{ wine.winery }}</p>
+        <p>{{ wine.rating.average }} / 5 ({{ wine.rating.reviews }} reviews)</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCategory === 'rose'" class="wine-section fade-in">
+    <h2>Rosé Wines</h2>
+    <div class="wine-list">
+      <div *ngFor="let wine of roseWines" class="wine-item">
+        <img [src]="wine.image" alt="{{ wine.wine }}" class="wine-image" />
+        <h3>{{ wine.wine }}</h3>
+        <p>{{ wine.winery }}</p>
+        <p>{{ wine.rating.average }} / 5 ({{ wine.rating.reviews }} reviews)</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCategory === 'port'" class="wine-section fade-in">
+    <h2>Port Wines</h2>
+    <div class="wine-list">
+      <div *ngFor="let wine of portWines" class="wine-item">
+        <img [src]="wine.image" alt="{{ wine.wine }}" class="wine-image" />
+        <h3>{{ wine.wine }}</h3>
+        <p>{{ wine.winery }}</p>
+        <p>{{ wine.rating.average }} / 5 ({{ wine.rating.reviews }} reviews)</p>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,9 @@
+<div class="profile-container">
+    <h2>Your Reviews</h2>
+    <div *ngFor="let review of reviews" class="review-item">
+      <h3>{{ review.wineName }}</h3>
+      <p>{{ review.review }}</p>
+      <p><strong>Rating: {{ review.rating }}/5</strong></p>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/api-data">Wines</a></li>
+      <li><a routerLink="/form">Review</a></li>
+      <li *ngIf="!authService.isLoggedIn"><a routerLink="/register">Register</a></li>
+      <li *ngIf="!authService.isLoggedIn"><a routerLink="/login">Login</a></li>
+      <li *ngIf="authService.isLoggedIn"><a routerLink="/profile">Profile</a></li>
+      <li *ngIf="authService.isLoggedIn"><button (click)="logout()">Logout</button></li>
+    </ul>
+  </nav>
+  
